@@ -1,0 +1,83 @@
+{
+  "endpoints": {
+    "public_gql": "https://api.traceable.ai/graphql",
+    "private_gql": "https://app.traceable.ai/graphql"
+  },
+
+  "auth": {
+    "public_token": "<your_api_token>",
+    "public_use_bearer": false,
+
+    "private_token": "<your_private_JWT_token>",
+    "private_use_bearer": true
+  },
+
+  "updates": {
+    "new_idle_timeout": "PT30M",
+    "new_scan_timeout": "PT120M",
+    "force_is_learnt_true": true,
+    "runner_labels": ["F5-Runner"]
+  },
+
+  "filters": {
+    "scan_suite_name_like": "Daily_Passive_Scan",
+    "scan_suite_name_regex": null
+  },
+
+  "dry_run": {
+    "enabled": false,
+    "max_suites": 200
+  },
+
+  "rate_limit": {
+    "public_min_interval_s": 0.35,
+    "private_min_interval_s": 0.35,
+    "public_max_retries": 6,
+    "private_max_retries": 6
+  },
+
+  "debug": {
+    "print_gql_before_exec": true,
+    "print_vars_before_exec": true,
+    "dump_gql_to_files": true,
+    "debug_dump_dir": "debug_requests",
+    "max_print_chars": 15000
+  },
+
+  "output": {
+    "failed_out": "failed_suites.jsonl"
+  },
+
+  "migration": {
+    "source_env": "akamai-poc",
+    "target_env": "f5-mirroring",
+    "scan_name_suffix": "Daily_Passive_Scan",
+
+    "policy_id": "30ce0c1a-3cfe-46dc-8ace-97937d357f9f",
+    "hook_id": "0712511d-7c05-42ff-a4ec-773709222406",
+
+    "schedule_time": "18:00:00.000Z",
+    "runner_labels": ["F5-Runner"],
+
+    "delay_duration": "PT0S",
+    "idle_timeout": "PT1800S",
+    "scan_timeout": "PT7200S",
+    "test_threads": 20,
+
+    "vuln_severity": "HIGH",
+    "vuln_threshold": 0,
+    "vuln_open_duration": "PT604800S",
+
+    "batch_size": 50,
+    "report_out": "migration_report.json"
+  },
+
+  "gap_analysis": {
+    "target_env": "f5-mirroring",
+    "owner_window_hours": 24,
+    "discovery_states": ["DISCOVERED", "UNDER_DISCOVERY"],
+    "explore_limit": 1000,
+    "group_limit": 5000,
+    "report_out": "gap_analysis_report.json"
+  }
+}
