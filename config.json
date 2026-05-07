@@ -1,0 +1,83 @@
+{
+  "endpoints": {
+    "public_gql": "https://api.traceable.ai/graphql",
+    "private_gql": "https://app.traceable.ai/graphql"
+  },
+
+  "auth": {
+    "public_token": "YWZhMzY3ZDMtNzQ4Ni00MDU3LWIyYWEtMjU5NGQ4ZTk2NWZk",
+    "public_use_bearer": false,
+
+    "private_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFqYzBNell4UkRKRVJUSkVOMFZGTlVRMk4wVXlOVFZCTlVVME1rVTBSVUl6T0VZNVF6VTFPQSJ9.eyJodHRwczovL3RyYWNlYWJsZS5haS9yb2xlc192MiI6WyJ0cmFjZWFibGVSZWFkV3JpdGUiXSwiaHR0cHM6Ly90cmFjZWFibGUuYWkvY3VzdG9tZXJfaWQiOiJkZjZmMWNjMi05ZjdmLTQ2MzMtYmYwYy1kZGIxYzUxMGRjZGUiLCJodHRwczovL3RyYWNlYWJsZS5haS9yb2xlcyI6WyJ0cmFjZWFibGVSZWFkV3JpdGUiXSwiaHR0cHM6Ly90cmFjZWFibGUuYWkvanRpIjoiMjZkNmVmYWMtODYzMy00ZjM3LWE4OGYtOTg5NzBiMGNlZDMxIiwiaHR0cHM6Ly90cmFjZWFibGUuYWkvcmljaF9yb2xlcyI6W3siZW52cyI6W10sImlkIjoidHJhY2VhYmxlUmVhZFdyaXRlIn1dLCJnaXZlbl9uYW1lIjoiVmlqYXkgU2hhbmthciIsImZhbWlseV9uYW1lIjoiVmVua2F0YWNoYWxhbSIsIm5pY2tuYW1lIjoidmlqYXkudmVua2F0YWNoYWxhbSIsIm5hbWUiOiJWaWpheSBTaGFua2FyIFZlbmthdGFjaGFsYW0iLCJwaWN0dXJlIjoiaHR0cHM6Ly9zLmdyYXZhdGFyLmNvbS9hdmF0YXIvZGIyYjRmM2M2M2JhZTFmMjJjNDJiMDE5ODI2YzVjZGU_cz00ODAmcj1wZyZkPWh0dHBzJTNBJTJGJTJGY2RuLmF1dGgwLmNvbSUyRmF2YXRhcnMlMkZ2cy5wbmciLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNS0wN1QxNDoyODozOS4wMjZaIiwiZW1haWwiOiJ2aWpheS52ZW5rYXRhY2hhbGFtQGhhcm5lc3MuaW8iLCJlbWFpbF92ZXJpZmllZCI6InRydWUiLCJpc3MiOiJodHRwczovL2F1dGgudHJhY2VhYmxlLmFpLyIsImF1ZCI6InVzNWtkYm54Y2UzTmhlTGJ6TEN4dVpxWUlRWWdRZ204Iiwic3ViIjoic2FtbHB8U0FNTC1UcmFjZWFibGUtUHJvZHx2aWpheS52ZW5rYXRhY2hhbGFtQGhhcm5lc3MuaW8iLCJpYXQiOjE3NzgxNjUxMTQsImV4cCI6MTc3ODIwMTExNCwic2lkIjoiWkN6NUg0MWFKeXBURVFFWHZZSzU2NEk1cjNHNm5rSmIiLCJub25jZSI6IkRRUnhhYk96d0xjMlFGMzI1MHJGSkJVTjZCaWRyM2ttbEpoVFJreFpPajAifQ.nMQXD1MdhaSJuDBFvCqoFkM0fuQnMJpNDuU0G1npPRwCMJuemIbKx6NAUn_EIA5awq2-Ez0Q_q73bPgXsE6A7Df92brGv203ZitYEKbzlxF74gKSZZbHbt8kL_POradVFagx1iY_UDY2NMrkv7rsOH0RkycocaEiWrkdDTz5h5GN2FCkH0MpP0xYEMXG7T_hGOgN7PSzv5esTqc5NRFTlCooBJRSYCS1yc79rR3huGGY3SyHGxPmExhnMxgUTjyHJDxsMvCO9sbIterMGdpK3PLwotrIUN9-65HPTG4_9H6qXUDS7RyrqhkhWOA2vNkZeAjgQOTR6-40ccFowr2SxA",
+    "private_use_bearer": true
+  },
+
+  "updates": {
+    "new_idle_timeout": "PT30M",
+    "new_scan_timeout": "PT120M",
+    "force_is_learnt_true": true,
+    "runner_labels": ["F5-Runner"]
+  },
+
+  "filters": {
+    "scan_suite_name_like": "Daily_Passive_Scan",
+    "scan_suite_name_regex": null
+  },
+
+  "dry_run": {
+    "enabled": false,
+    "max_suites": 200
+  },
+
+  "rate_limit": {
+    "public_min_interval_s": 0.35,
+    "private_min_interval_s": 0.35,
+    "public_max_retries": 6,
+    "private_max_retries": 6
+  },
+
+  "debug": {
+    "print_gql_before_exec": true,
+    "print_vars_before_exec": true,
+    "dump_gql_to_files": true,
+    "debug_dump_dir": "debug_requests",
+    "max_print_chars": 15000
+  },
+
+  "output": {
+    "failed_out": "failed_suites.jsonl"
+  },
+
+  "migration": {
+    "source_env": "akamai-poc",
+    "target_env": "f5-mirroring",
+    "scan_name_suffix": "Daily_Passive_Scan",
+
+    "policy_id": "30ce0c1a-3cfe-46dc-8ace-97937d357f9f",
+    "hook_id": "0712511d-7c05-42ff-a4ec-773709222406",
+
+    "schedule_time": "18:00:00.000Z",
+    "runner_labels": ["F5-Runner"],
+
+    "delay_duration": "PT0S",
+    "idle_timeout": "PT1800S",
+    "scan_timeout": "PT7200S",
+    "test_threads": 20,
+
+    "vuln_severity": "HIGH",
+    "vuln_threshold": 0,
+    "vuln_open_duration": "PT604800S",
+
+    "batch_size": 50,
+    "report_out": "migration_report.json"
+  },
+
+  "gap_analysis": {
+    "target_env": "f5-mirroring",
+    "owner_window_hours": 24,
+    "discovery_states": ["DISCOVERED", "UNDER_DISCOVERY"],
+    "explore_limit": 1000,
+    "group_limit": 5000,
+    "report_out": "gap_analysis_report.json"
+  }
+}
